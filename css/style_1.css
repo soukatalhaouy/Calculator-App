@@ -1,0 +1,155 @@
+body{
+    display: table-cell;
+    vertical-align: middle;
+    background-color:hsl(222, 26%, 31%);
+    font-family: 'League Spartan', sans-serif;
+}
+html, body {
+    height: 100%;
+}
+html {
+    display: table;
+    margin: auto;
+}
+.container {
+    display: grid;  
+    grid-template-rows: repeat(3, auto);
+    gap: 15px;
+    width: 100%;
+}
+.header{
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: space-between;
+}
+.header .theme span{
+    font-size: xx-small;
+    text-transform: uppercase;
+}
+.header .theme .theme-btn{
+    width: 60px;
+    height: auto;
+    margin: 0;
+    margin-left: 15px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: none;
+    background-color: hsl(224, 36%, 15%);
+}
+.header .theme a {
+    text-decoration: none;
+    background-color: hsl(6, 63%, 50%);
+    border-radius: 50%;
+    padding: 0px 5px;
+    font-size: 10px;
+    margin-left: 5px;
+    
+}
+.window{
+    background-color: hsl(224, 36%, 15%);
+    width: 290px;
+    height: 60px;
+    border: 0;
+    border-radius: 4px;
+    text-align: right;
+    font-family: 'League Spartan', sans-serif;
+    color: hsl(0, 0%, 100%); 
+    font-size: 30px;
+}
+.result input:focus {
+    outline: 0;
+}
+.calculator{
+    background-color: hsl(223, 31%, 20%);
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 15px;
+    padding: 15px;
+    border-radius: 4px;
+}
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.ex{
+    display: flex;
+    gap: 20px;
+}
+button {
+    width: 50px;
+    height: 30px;
+    border-radius: 4px;
+    border: 0;
+    font-size: 20px;
+    color: hsl(223, 31%, 20%);
+    font-family: 'League Spartan', sans-serif;
+    box-shadow: 0px 2px hsl(28, 16%, 65%);
+    cursor: pointer;
+} 
+button:hover{
+    box-shadow: none;
+}
+.reset {
+    width: 120px;
+}
+.del, .reset{
+    background-color: hsl(225, 21%, 49%); 
+    color: hsl(0, 0%, 100%); 
+    font-size: 12px;
+    box-shadow: 0px 2px hsl(224, 28%, 35%);
+}
+.del:hover,
+.reset:hover {
+    background-color: hsl(224, 28%, 35%); 
+    box-shadow: 0px 2px hsl(225, 21%, 49%);
+}
+.equal{
+    background-color: hsl(6, 63%, 50%);  
+    color: hsl(0, 0%, 100%);
+    width: 120px;
+    box-shadow: 0px 2px hsl(6, 70%, 34%);
+}
+.equal:hover{
+    background-color: hsl(6, 70%, 34%);
+    box-shadow: 0px 2px hsl(6, 63%, 50%);
+}
+
+/* Mobile */
+
+@media (max-width : 480px) {
+    .container {
+        grid-template-rows: 30px 60px 1fr;
+    }
+    .window{
+        width: 225px;
+        height: 60px;
+    }
+    .header{
+        height: 5px;
+    }
+    .result{
+        height: 60px;
+    }
+    .calculator{
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        gap: 15px;
+    }
+    .ex{
+        justify-content: flex-start;
+    }
+    button {
+        width: 35px;
+        height: 40px;
+    } 
+    .reset {
+        width: 85px;
+    }
+    .equal{
+        width: 85px;
+    }
+}

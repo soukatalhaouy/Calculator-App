@@ -1,0 +1,155 @@
+body{
+    display: table-cell;
+    vertical-align: middle;
+    background-color:hsl(268, 75%, 9%);
+    font-family: 'League Spartan', sans-serif;
+}
+html, body {
+    height: 100%;
+}
+html {
+    display: table;
+    margin: auto;
+}
+.container {
+    display: grid;  
+    grid-template-rows: repeat(3, auto);
+    gap: 15px;
+    width: 100%;
+}
+.header{
+    color: hsl(52, 100%, 62%);
+    display: flex;
+    justify-content: space-between;
+}
+.header .theme span{
+    font-size: xx-small;
+    text-transform: uppercase;
+}
+.header .theme .theme-btn{
+    width: 60px;
+    height: auto;
+    margin: 0;
+    margin-left: 15px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: none;
+    background-color: hsl(268, 71%, 12%);
+}
+.header .theme a {
+    text-decoration: none;
+    background-color: hsl(176, 100%, 44%);
+    border-radius: 50%;
+    padding: 0px 5px;
+    font-size: 10px;
+    margin-left: 5px;
+}
+.window{
+    background-color: hsl(268, 71%, 12%);
+    width: 290px;
+    height: 60px;
+    border: 0;
+    border-radius: 4px;
+    text-align: right;
+    font-family: 'League Spartan', sans-serif;
+    color: hsl(52, 100%, 62%); 
+    font-size: 30px;
+}
+.result input:focus {
+    outline: 0;
+}
+.calculator{
+    background-color: hsl(268, 71%, 12%);
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 15px;
+    padding: 15px;
+    border-radius: 4px;
+}
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.ex{
+    display: flex;
+    gap: 20px;
+}
+button {
+    background-color: hsl(268, 47%, 21%);
+    width: 50px;
+    height: 30px;
+    border-radius: 4px;
+    border: 0;
+    font-size: 20px;
+    color: hsl(52, 100%, 62%);
+    font-family: 'League Spartan', sans-serif;
+    box-shadow: 0px 2px hsl(290, 70%, 36%);
+    cursor: pointer;
+} 
+button:hover {
+    background-color: hsl(285, 91%, 52%); 
+    box-shadow: 0px 2px  hsl(281, 89%, 26%);
+}
+.reset {
+    width: 120px; 
+}
+.del, .reset{
+    background-color: hsl(281, 89%, 26%); 
+    color: hsl(0, 0%, 100%); 
+    font-size: 12px;
+    box-shadow: 0px 2px hsl(285, 91%, 52%);
+}
+.del:hover,
+.reset:hover {
+    background-color: hsl(285, 91%, 52%); 
+    box-shadow: 0px 2px  hsl(281, 89%, 26%);
+}
+.equal{
+    background-color: hsl(176, 100%, 44%);  
+    color: hsl(0, 0%, 100%);
+    width: 125px;
+    box-shadow: 0px 2px hsl(177, 92%, 70%);
+}
+.equal:hover{
+    background-color: hsl(177, 92%, 70%);
+    box-shadow: 0px 2px hsl(176, 100%, 44%);
+}
+/* Mobile */
+
+@media (max-width : 480px) {
+    .container {
+        grid-template-rows: 30px 60px 1fr;
+    }
+    .window{
+        width: 225px;
+        height: 60px;
+    }
+    .header{
+        height: 5px;
+    }
+    .result{
+        height: 60px;
+    }
+    .calculator{
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        gap: 15px;
+    }
+    .ex{
+        justify-content: flex-start;
+    }
+    button {
+        width: 35px;
+        height: 40px;
+    } 
+    .reset {
+        width: 85px;
+    }
+    .equal{
+        width: 85px;
+    }
+}

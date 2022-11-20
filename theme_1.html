@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style_1.css">
+
+  <!-- Font Family -->
+
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+ 
+  <title>Calculator app</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span>calc</span>
+      <div class="theme">
+        <span>theme</span>
+        <button class="theme-btn">
+          <a href="theme_1.html"></a>
+          <a href="theme_2.html"></a>
+          <a href="theme_3.html"></a>
+        </button>
+      </div>
+    </div>
+    <div class="result">
+      <input type=" text" class="window" name="display" id="display" value=" " aria-label="answer display">
+    </div>
+    <div class="calculator">
+    <div class="keys">
+      <button class="btn number" onclick="enterValue('7')">7</button>
+      <button class="btn number" onclick="enterValue('8')">8</button>
+      <button class=" btn number" onclick="enterValue('9')">9</button>
+      <button class=" btn del" onclick="displayDelete()">DEL</button>
+    </div>
+    <div class="keys">
+      <button class=" btn number" onclick="enterValue('4')">4</button>
+      <button class="btn number" onclick="enterValue('5')">5</button>
+      <button class="btn number" onclick="enterValue('6')">6</button>
+      <button class="btn operator" onclick="enterOperator('+')">+</button>
+    </div>
+    <div class="keys">
+      <button class="btn number" onclick="enterValue('1')">1</button>
+      <button class="btn number" onclick="enterValue('2')">2</button>
+      <button class="btn number" onclick="enterValue('3')">3</button>
+      <button class="btn operator" onclick="enterOperator('-')">-</button>
+    </div>
+    <div class="keys">
+      <button  class="btn number" onclick="enterValue('.')">.</button>
+      <button class="btn number" onclick="enterValue('0')">0</button>
+      <button class="btn operator" onclick="enterOperator('/')">/</button>
+      <button class="btn operator" onclick="enterOperator('*')">x</button>
+    </div>
+    <div class="keys ex">
+      <button class="btn reset" name="resetButton" value="RESET" onclick="displayClear()">RESET</button>
+      <button class="btn operator equal" onclick="execute('=')">=</button>
+    </div>
+  </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
